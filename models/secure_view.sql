@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='view',secure=true
+
+    )
+}}
+
  select 
 	 ID as cust_id
 	,NAME as cust_name 
@@ -6,4 +13,4 @@
 	,CREATED_AT  
 	,UPDATED_AT  
 
- from SALES_DB.RAW_SCHEMA.CUSTOMER
+ from SALES_DB.RAW_SCHEMA.RAW_CUSTOMERS

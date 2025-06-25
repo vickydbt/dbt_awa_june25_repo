@@ -1,0 +1,21 @@
+version: 2
+sources:
+  - name: raw_src # this is the source_name
+    database: SALES_DB
+    schema: RAW_SCHEMA
+    tables:
+      - name: RAW_CUSTOMERS # this is the table_name 
+      - name: RAW_ORDERS 
+      - name: RAW_ORDER_ITEMS      
+      - name: RAW_PAYMENT 
+      - name: RAW_PRODUCTS 
+
+
+
+
+
+  - name: raw_sf # this is the source_name
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    tables:
+      - name: Nation 
