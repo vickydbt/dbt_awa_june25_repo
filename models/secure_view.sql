@@ -6,11 +6,11 @@
 }}
 
  select 
-	 ID as cust_id
-	,NAME as cust_name 
-	,EMAIL as cust_email 
-	,REGION  
-	,CREATED_AT  
-	,UPDATED_AT  
+	 id as cust_id
+	,name as cust_name 
+	,email as cust_email 
+	,region  
+	,created_at  
+	,updated_at  
 
- from SALES_DB.RAW_SCHEMA.RAW_CUSTOMERS
+ from sales_db.raw_schema.raw_customers

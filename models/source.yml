@@ -1,21 +1,22 @@
 version: 2
 sources:
   - name: raw_src # this is the source_name
-    database: SALES_DB
-    schema: RAW_SCHEMA
+    database: sales_db
+    schema: raw_schema
     tables:
-      - name: RAW_CUSTOMERS # this is the table_name 
-      - name: RAW_ORDERS 
-      - name: RAW_ORDER_ITEMS      
-      - name: RAW_PAYMENT 
-      - name: RAW_PRODUCTS 
+
+      - name: raw_orders 
+      - name: raw_products     
+      - name: raw_reviews 
+      - name: raw_users 
+      - name: raw_customers # this is the table_name 
 
 
 
 
 
   - name: raw_sf # this is the source_name
-    database: SNOWFLAKE_SAMPLE_DATA
-    schema: TPCH_SF1
+    database: snowflake_sample_data
+    schema: tpch_sf1
     tables:
-      - name: Nation 
+      - name: nation 
