@@ -10,6 +10,8 @@ sources:
       - name: raw_reviews 
       - name: raw_users 
       - name: raw_customers # this is the table_name 
+      - name: emp
+        identifier: employee  
 
 
 
