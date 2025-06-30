@@ -5,13 +5,14 @@ sources:
     schema: raw_schema
     tables:
 
+      - name: transactions 
       - name: raw_orders 
       - name: raw_products     
       - name: raw_reviews 
       - name: raw_users 
       - name: raw_customers # this is the table_name 
-      - name: emp
-        identifier: employee  
+      - name: emp                 # Logical name used in dbt
+        identifier: employees     # Physical table name in DB
 
 
 
