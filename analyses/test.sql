@@ -1,0 +1,1 @@
+SELECT  {{ generate_payment_amt_col() }}
