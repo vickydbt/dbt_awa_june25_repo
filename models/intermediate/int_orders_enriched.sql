@@ -5,5 +5,6 @@ select
     product_id,
     quantity,
     unit_price,
-    quantity * unit_price as order_amount
+    --quantity * unit_price as order_amount
+   {{multiply_columns('quantity','unit_price')}} as order_amount
 from {{ ref('stg_orders') }}
