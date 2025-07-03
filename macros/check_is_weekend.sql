@@ -3,6 +3,6 @@
 case when extract(dayofweek from to_date({{ dt_column }})) in (1, 7)
          then 'Weekend'
          else 'Weekday'
-    end
+    end as day_type
 
 {% endmacro %}
