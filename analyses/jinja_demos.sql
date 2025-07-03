@@ -1,28 +1,26 @@
-{{ 'Welcome to dbt cloud' }}
-
-{# comment #}
+{# comment will not appear in the compiled SQL -#}
+--comment will  appear in the compiled SQL
 
 {# 
 multi
 line
 comment
 #}
-
-{% set var1 = 'Hello World without -' %}
-{{ var1 }}
-{%set var2 = 'Hello World with ' -%}
-{{ var2 }}
-
-{% set var3 = ['Hello World', 'welcome to dbt, World!'] -%}
-{{ var3 }}
-{{ var3[1] }}
-
-{% set var3 = ['Hello World_1', 'Hello World_2','Hello World_3'] %}
-
-{% for item in var3 %}
-  {{ item }}
-{% endfor %}
-
+--------------------------------------------------------
+{% set var1 = 'Hello' %}
+{{ var1 }}  -- print the value of variable
+--------------------------------------------------------
+{% set my_fruits = ["apple", "banana", "cherry"] -%}
+{{ my_fruits }}
+{{ my_fruits[1] }}
+--------------------------------------------------------
+--print using loop
+{% set my_fruits = ["apple", "banana", "cherry"] %}
+select 
+{% for item in my_fruits %}
+  {{ item }} {% if not loop.last %},{% endif %}
+{%- endfor %}
+--------------------------------------------------------
  
 
 {# ------if else end if conditon------  #}
