@@ -17,6 +17,12 @@ comment
 {{ var3 }}
 {{ var3[1] }}
 
+{% set var3 = ['Hello World_1', 'Hello World_2','Hello World_3'] %}
+
+{% for item in var3 %}
+  {{ item }}
+{% endfor %}
+
  
 
 {# ------if else end if conditon------  #}

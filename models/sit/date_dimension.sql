@@ -1,0 +1,1 @@
+{{ dbt_date.get_date_dimension('2025-07-01', '2025-07-05') }}
