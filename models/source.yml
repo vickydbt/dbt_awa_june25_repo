@@ -4,6 +4,7 @@ sources:
     database: sales_db
     schema: raw_schema
     tables:
+      - name: orders_status
       - name: raw_payments
 
       - name: transactions 
