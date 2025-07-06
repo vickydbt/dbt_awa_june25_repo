@@ -1,1 +1,2 @@
+
 select * from {{ source('raw_src', 'orders_status') }}
