@@ -7,5 +7,5 @@
             updated_at='updated_at'
         )
     }}
-    select * from  sales_db.raw_schema.orders_status
+    select * from {{ ref('stg_orders_status') }}
 {% endsnapshot %}
