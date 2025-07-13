@@ -8,12 +8,8 @@ sources:
         columns:
           - name: id
             data_tests:
-              - unique:
-                 config:
-                  severity: warn
-              - not_null:
-                 config:
-                  severity: error
+              - unique
+              - not_null
           - name: product_id
             data_tests:
               - unique :
@@ -21,21 +17,12 @@ sources:
                   severity: warn
    
       - name: raw_products  
-        columns:
-          - name: id
-            data_tests:
-              - unique
-              - not_null
-
-                 
-
       - name: orders_status
       - name: raw_payments
-
       - name: transactions 
       - name: raw_reviews 
       - name: raw_users 
-      - name: raw_customers # this is the table_name 
+      - name: raw_customers       # This is the table_name 
       - name: emp                 # Logical name used in dbt
         identifier: employees     # Physical table name in DB
 

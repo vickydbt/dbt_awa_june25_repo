@@ -1,0 +1,15 @@
+version: 2
+
+models:
+ - name: stg_products
+   columns:
+    - name: category
+      tests: 
+       - accepted_values:
+          values: ["Smartwatch", "Mobile", "LED", "Laptop"]
+    - name: id
+      tests: 
+       - relationships:        # check referential integrity between id and product_id
+          field: product_id    # Foreign_key_column
+          to: ref('stg_orders')
+          
